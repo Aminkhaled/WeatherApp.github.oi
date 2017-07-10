@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather App</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <nav class="navbar navbar-default" id="nav_bar">
@@ -86,7 +86,53 @@
         </div>
     </div>
 </div>
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/typed.js"></script>
+<script>
+    $(document).ready(function(){
+        setTimeout(function(){
+            $("#colHeadText1").typed({
+                strings: ["The most simplest weather app. It's simple."],
+                typeSpeed: 40
+            })
+        }, 0);
+
+        setTimeout(function(){
+            $("#colHeadText2").typed({
+                strings: ["Get weather information of any city."],
+                typeSpeed: 50
+            })
+        }, 2000);
+
+        setTimeout(function(){
+            $("#list1").typed({
+                strings: ["Temperature"],
+                typeSpeed: 50
+            })
+        }, 4000);
+
+        setTimeout(function(){
+            $("#list2").typed({
+                strings: ["Pressure"],
+                typeSpeed: 50
+            })
+        }, 6000);
+
+        setTimeout(function(){
+            $("#list3").typed({
+                strings: ["Wind Speed"],
+                typeSpeed: 50
+            })
+        }, 8000);
+
+        setTimeout(function(){
+            $("#list4").typed({
+                strings: ["Humidity"],
+                typeSpeed: 50
+            })
+        }, 10000);
+    });
+</script>
 </body>
 </html>

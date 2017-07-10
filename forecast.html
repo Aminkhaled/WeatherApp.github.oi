@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Current Weather</title>
+    <title>Weather App - Forecast</title>
+
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-<!--
-http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=17eba74f84031edcca493f45cbd6a582
-
--->
 <nav class="navbar navbar-default" id="nav_bar">
     <div class="container">
         <div class="navbar-header">
@@ -42,26 +39,52 @@ http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=17eba
 </nav>
 
 <div class="jumbotron" style="margin-bottom:0; background-color:#FF5530; color:white;">
-    <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Current Weather Information</h2>
+    <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Weather Forecast</h2>
 </div>
 
-<div class="container" style="height:650px;">
+<div class="container" style="height:1350px;">
     <div class="row" >
         <div class="col-md-12" style="margin-bottom:10px;">
-            <h3 class="text-center text-primary" style="color:#FF5530; ">Enter City Name</h3>
+            <h3 class="text-center" style="color: #FF5530;">Enter City Name</h3>
             <span id="error" class="text-center"></span>
         </div>
 
         <div class="row form-group form-inline" id="cityDiv">
 
             <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name" >
-            <button id="submitCity" class="btn btn-orange">Search City</button>
+            <input type="text" name="days" id="days" class="form-control" placeholder="Number: Min - 1 & Max - 16" >
+            <button id="submitForecast" class="btn btn-orange">Search City</button>
         </div>
 
     </div>
 
+    <div class="row" style="margin-top:30px">
+        <table class="table table-bordered">
+            <div id="header"  class="text-center"></div>
 
-    <div id="showWeather"></div>
+            <thead>
+            <tr>
+                <th>Icon</th>
+                <th>Weather</th>
+                <th>Description</th>
+                <th>Morning Temperature</th>
+                <th>Night Temperature</th>
+                <th>Min. Temperature</th>
+                <th>Max. Temperature</th>
+                <th>Pressure</th>
+                <th>Humidity</th>
+                <th>Wind Speed</th>
+                <th>Wind Direction</th>
+            </tr>
+            </thead>
+
+            <tbody id="forecastWeather">
+
+            </tbody>
+
+        </table>
+    </div>
+
 </div>
 
 <div class="footer">
@@ -71,8 +94,15 @@ http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=17eba
         </div>
     </div>
 </div>
+
+
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="js/weather.js"></script>
+
+<script src="js/forecast.js"></script>
+
 </body>
 </html>

@@ -12,7 +12,7 @@ $(document).ready(function () {
          $.ajax({
            url:'http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&APPID=17eba74f84031edcca493f45cbd6a582',
              type:"GET",
-             dataType:"json",
+             dataType:"jsonp",
              success:function (data) {
  var widget = showResults(data);
                  $('#showWeather').html(widget);
